@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Portik-Olivér-házi',
+  tagline: 'Dinók és doksik',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -42,7 +42,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -83,17 +83,19 @@ const config = {
         },
         items: [
           {
+            to: '/docs/tutorials/intro', // Ez a sor opcionális, akkor használd, ha konkrét oldalra szeretnél mutatni a navbar-ban
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'tutorialSidebar', // A tutorials oldalsáv ID-ja
             position: 'left',
-            label: 'Tutorial',
+            label: 'Tutorials',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/guides/installation-guide', label: 'Guides', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
+          
         ],
       },
       footer: {
