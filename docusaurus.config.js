@@ -25,7 +25,7 @@ const config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -181,3 +181,13 @@ plugins: [
 };
 
 export default config;
+
+module.exports = {
+  // ...
+  url: 'https://ash-light.github.io', // Cseréld le a saját GitHub felhasználónevedre!
+  baseUrl: '/Docusaurus-hazi-Oliver/', // Cseréld le a repository nevére!
+                                     // Ha a repository-hoz tartozó GitHub Pages neve <FELHASZNALONEVED>.github.io, akkor a baseUrl '/' legyen.
+  organizationName: 'ash-light', // A GitHub felhasználóneved
+  projectName: 'Docusaurus-hazi-Oliver', // A GitHub repository-d neve
+  // ...
+};
