@@ -1,5 +1,6 @@
 ---
 title: Első tapasztalataim a Docusaurusszal
+authors: [ash-light]
 tags: [docusaurus, docs, github-actions, ci]
 description: Rövid összefoglaló arról, hogyan állítottam be a Docusaurust és CI workflow-t egy dokumentációs projekthez.
 ---
