@@ -141,6 +141,10 @@ const config = {
                 label: 'X',
                 href: 'https://x.com/docusaurus',
               },
+                            {
+                label: 'Lecke',
+                href: 'https://ddyfedd.github.io/docusaurus-test/docs/docusaurus-hazi/feladatok/reszfeladat4',
+              },
             ],
           },
           {
