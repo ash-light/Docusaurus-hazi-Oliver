@@ -6,31 +6,21 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Portik-Olivér-házi',
   tagline: 'Dinók és doksik',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  url: 'https://ash-light.github.io',
+  baseUrl: '/Docusaurus-hazi-Oliver/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'ash-light',
+  projectName: 'Docusaurus-hazi-Oliver',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -43,9 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          docItemComponent: "@theme/ApiItem", 
+          docItemComponent: "@theme/ApiItem",
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -55,11 +43,8 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -70,35 +55,32 @@ const config = {
       }),
     ],
   ],
-plugins: [
+
+  plugins: [
     [
       'docusaurus-plugin-openapi-docs',
       {
-        id: 'openapi', // A plugin egyedi azonosítója
+        id: 'openapi',
         docsPluginId: 'classic',
         config: {
-          petstore: {  // Egyedi azonosító az API doksinak
-            specPath: 'openapi/petstore-api.yaml', // Az OpenAPI fájl elérési útja
-            outputDir: 'docs/petstore', // A generált Markdown fájlok helye
+          petstore: {
+            specPath: 'openapi/petstore-api.yaml',
+            outputDir: 'docs/petstore',
             sidebarOptions: {
-              groupPathsBy: 'tag',  // Csoportosítás tagek alapján az oldalsávban
-          // További opciók a plugin dokumentációja szerint
+              groupPathsBy: 'tag',
               categoryLinkSource: 'info',
             },
-            // Opcionális: downloadButton: true,
           },
-        }
-      }
-    ]
+        },
+      },
+    ],
   ],
-  themes: ['docusaurus-theme-openapi-docs'],
-  
 
+  themes: ['docusaurus-theme-openapi-docs'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'My Site',
@@ -108,13 +90,17 @@ plugins: [
         },
         items: [
           {
-            to: '/docs/tutorials/intro', // Ez a sor opcionális, akkor használd, ha konkrét oldalra szeretnél mutatni a navbar-ban
+            to: '/docs/tutorials/intro',
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar', // A tutorials oldalsáv ID-ja
+            sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorials',
           },
-          {to: '/docs/guides/installation-guide', label: 'Guides', position: 'left'},
+          {
+            to: '/docs/guides/installation-guide',
+            label: 'Guides',
+            position: 'left',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -125,7 +111,7 @@ plugins: [
             sidebarId: 'myApiSidebar',
             position: 'left',
             label: 'Petstore API',
-          },          
+          },
         ],
       },
       footer: {
@@ -181,14 +167,3 @@ plugins: [
 };
 
 export default config;
-
-module.exports = {
-  // ...
-  title: 'My Docusaurus Site', 
-  url: 'https://ash-light.github.io', // Cseréld le a saját GitHub felhasználónevedre!
-  baseUrl: '/Docusaurus-hazi-Oliver/', // Cseréld le a repository nevére!
-                                     // Ha a repository-hoz tartozó GitHub Pages neve <FELHASZNALONEVED>.github.io, akkor a baseUrl '/' legyen.
-  organizationName: 'ash-light', // A GitHub felhasználóneved
-  projectName: 'Docusaurus-hazi-Oliver', // A GitHub repository-d neve
-  // ...
-};
