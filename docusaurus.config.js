@@ -184,6 +184,7 @@ export default config;
 
 module.exports = {
   // ...
+  title: 'My Docusaurus Site', 
   url: 'https://ash-light.github.io', // Cseréld le a saját GitHub felhasználónevedre!
   baseUrl: '/Docusaurus-hazi-Oliver/', // Cseréld le a repository nevére!
                                      // Ha a repository-hoz tartozó GitHub Pages neve <FELHASZNALONEVED>.github.io, akkor a baseUrl '/' legyen.
