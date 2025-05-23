@@ -1,5 +1,6 @@
 ---
 title: Installation Guide
+description: Hasznos tippek a Docusaurus projektek konfigurálásához.
 sidebar_position: 2
 ---
 

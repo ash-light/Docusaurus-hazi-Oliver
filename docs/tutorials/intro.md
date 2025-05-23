@@ -1,4 +1,6 @@
 ---
+title: Intro
+description: Leírás.
 sidebar_position: 1
 ---
 
