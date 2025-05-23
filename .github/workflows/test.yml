@@ -37,5 +37,8 @@ jobs:
             exit 1
           fi
 
+      - name: Build API Docs
+        run: npm run docusaurus gen-api-docs all
+
       - name: Build Docusaurus site
         run: npm run build
