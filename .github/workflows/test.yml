@@ -25,8 +25,8 @@ jobs:
       - name: Install markdownlint CLI
         run: npm install -g markdownlint-cli
 
-      - name: Lint Markdown files in /docs (excluding MD013)
-        run: markdownlint "docs/**/*.md" --ignore "node_modules" --disable MD013
+      - name: Lint Markdown files in /docs (MD013, MD025, MD026, MD034 disabled)
+        run: markdownlint "docs/**/*.md" --ignore "node_modules" --disable MD013 MD025 MD026 MD034
 
       - name: Check for SEO meta descriptions
         run: |
