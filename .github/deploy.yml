@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - master # Vagy master, attól függően, hogy nevezted el a fő branched
-  workflow_dispatch: # Manuális indítás engedélyezése
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # [https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on)
-
+ 
 jobs:
   build:
     name: Build Docusaurus
