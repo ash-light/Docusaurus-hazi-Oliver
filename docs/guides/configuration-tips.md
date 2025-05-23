@@ -1,5 +1,6 @@
 ---
 title: Configuration Tips
+description: Hasznos tippek a Docusaurus projektek konfigurálásához.
 sidebar_position: 3
 ---
 
