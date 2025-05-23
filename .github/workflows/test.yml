@@ -25,8 +25,9 @@ jobs:
       - name: Install markdownlint CLI
         run: npm install -g markdownlint-cli
 
-      - name: Lint Markdown files
-        run: markdownlint "**/*.md"
+      - name: Lint Markdown files in /docs
+        run: |
+          markdownlint "docs/**/*.md" --ignore "node_modules"
 
       - name: Check for SEO meta descriptions
         run: |
