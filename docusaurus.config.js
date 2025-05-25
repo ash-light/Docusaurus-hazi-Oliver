@@ -112,6 +112,11 @@ const config = {
             position: 'left',
             label: 'Petstore API',
           },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left',
+          },
         ],
       },
       footer: {
